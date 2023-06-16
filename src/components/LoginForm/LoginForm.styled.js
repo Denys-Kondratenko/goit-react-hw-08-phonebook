@@ -8,7 +8,7 @@ export const Input = styled(Field)`
   border-radius: 5px;
 `;
 
-export const ContactForm = styled(Form)`
+export const FormOfLogIn = styled(Form)`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -18,7 +18,7 @@ export const ContactForm = styled(Form)`
   border-radius: 5px;
 `;
 
-export const ContactLabel = styled.label`
+export const Label = styled.label`
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
@@ -30,7 +30,7 @@ export const ContactLabel = styled.label`
   }
 `;
 
-export const AddButton = styled.button`
+export const Button = styled.button`
   border-radius: 5px;
   border: none;
   cursor: pointer;
