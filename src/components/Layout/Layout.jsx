@@ -2,12 +2,12 @@ import { Container } from './Layout.styled';
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Loader } from 'components/Loader/Loader';
-import { Navigation } from 'components/Navigation/Navigation';
+import { AppBar } from 'components/AppBar/AppBar';
 
 export const Layout = () => {
   return (
     <Container>
-      <Navigation />
+      <AppBar />
       <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>

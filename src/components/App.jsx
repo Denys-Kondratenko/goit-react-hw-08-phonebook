@@ -1,12 +1,8 @@
-// import { AddContactForm } from './AddContactForm/AddContactForm';
-// import { Section } from './Section/Section';
-// import { Contact } from './Contact/Contact';
-// import { Layout } from './Layout/Layout';
-// import { GlobalStyle } from './GlobalStyle';
-// import { Filter } from './Filter/Filter';
 import { Routes, Route } from 'react-router-dom';
-import { lazy } from 'react';
+import { lazy, useEffect } from 'react';
 import { Layout } from './Layout/Layout';
+import { useDispatch } from 'react-redux';
+import { refreshUser } from 'redux/auth/operations';
 
 const Home = lazy(() => import('pages/Home'));
 const Contacts = lazy(() => import('pages/Contacts'));
@@ -15,6 +11,12 @@ const Register = lazy(() => import('pages/Register'));
 const NotFound = lazy(() => import('pages/NotFound'));
 
 export const App = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(refreshUser());
+  }, [dispatch]);
+
   return (
     <div>
       <Routes>
