@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { ContactItem, ContactsList, DeleteButton } from './Contacts.styled';
+import { ContactItem, ContactsList, DeleteButton } from './Contact.styled';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/contacts/operations';
 import { useSelector } from 'react-redux';
@@ -13,7 +13,7 @@ import { useEffect } from 'react';
 import { fetchContacts } from 'redux/contacts/operations';
 import { Loader } from 'components/Loader/Loader';
 
-export const Contacts = ({ children }) => {
+export const Contact = ({ children }) => {
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
   const filter = useSelector(selectFilter);
@@ -57,6 +57,6 @@ export const Contacts = ({ children }) => {
   );
 };
 
-Contacts.propTypes = {
+Contact.propTypes = {
   children: PropTypes.node,
 };
