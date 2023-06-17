@@ -1,7 +1,12 @@
 import { ErrorMessage, Formik } from 'formik';
-import { Link } from 'react-router-dom';
 import * as Yup from 'yup';
-import { Button, FormOfLogIn, Input, Label } from './LoginForm.styled';
+import {
+  Button,
+  FormOfLogIn,
+  Input,
+  Label,
+  RegisterLink,
+} from './LoginForm.styled';
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
 
@@ -54,7 +59,7 @@ export const LoginForm = () => {
 
       <p>
         Don't have an account yet? Please,
-        <Link to="/register">Register!</Link>
+        <RegisterLink to="/register">Register!</RegisterLink>
       </p>
     </div>
   );

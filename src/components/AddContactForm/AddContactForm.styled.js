@@ -31,8 +31,14 @@ export const ContactLabel = styled.label`
 `;
 
 export const AddButton = styled.button`
+  padding: 5px 10px;
   border-radius: 5px;
   border: none;
   cursor: pointer;
   box-shadow: 0px 2px 8px 1px rgba(0, 0, 0, 0.3);
+  &:hover,
+  :focus {
+    color: white;
+    background-color: orange;
+  }
 `;

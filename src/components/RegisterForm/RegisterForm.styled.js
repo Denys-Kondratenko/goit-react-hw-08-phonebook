@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Field, Form } from 'formik';
+import { Link } from 'react-router-dom';
 
 export const Input = styled(Field)`
   border: none;
@@ -31,8 +32,21 @@ export const RegisterLabel = styled.label`
 `;
 
 export const Button = styled.button`
+  padding: 5px 10px;
   border-radius: 5px;
   border: none;
   cursor: pointer;
   box-shadow: 0px 2px 8px 1px rgba(0, 0, 0, 0.3);
+  &:hover,
+  :focus {
+    color: white;
+    background-color: orange;
+  }
+`;
+
+export const LogInLink = styled(Link)`
+  &:hover,
+  :focus {
+    color: orange;
+  }
 `;

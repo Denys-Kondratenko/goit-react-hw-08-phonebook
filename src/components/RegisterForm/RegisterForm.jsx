@@ -1,11 +1,11 @@
 import { ErrorMessage, Formik } from 'formik';
-import { Link } from 'react-router-dom';
 import * as Yup from 'yup';
 import {
   Input,
   FormOfRegister,
   RegisterLabel,
   Button,
+  LogInLink,
 } from './RegisterForm.styled';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
@@ -68,7 +68,7 @@ export const RegisterForm = () => {
       </Formik>
 
       <p>
-        Already registered? <Link to="/login">Log In!</Link>
+        Already registered? <LogInLink to="/login">Log In!</LogInLink>
       </p>
     </div>
   );
